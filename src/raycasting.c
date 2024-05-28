@@ -5,16 +5,29 @@
 int worldMap[MAP_WIDTH][MAP_HEIGHT] = {
     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
     {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+    {1, 0, 1, 1, 1, 0, 0, 1, 0, 1},
+    {1, 0, 0, 0, 1, 0, 0, 0, 0, 1},
+    {1, 0, 0, 0, 1, 0, 1, 0, 1, 1},
+    {1, 0, 0, 0, 1, 0, 1, 0, 0, 1},
+    {1, 0, 0, 0, 0, 1, 0, 0, 0, 1},
     {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+    {1, 0, 0, 1, 0, 0, 0, 1, 0, 1},
     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 };
 
+/**
+ * isWall - Checks if a given position in the worldMap is a wall.
+ * @x: The x-coordinate to check.
+ * @y: The y-coordinate to check.
+ * 
+ * This function takes floating-point coordinates, converts them to integers
+ * map coordinates, and checks if the corresponding coordinate on the worldMap
+ * is a wall. It returns 1 if the position is a wall, and 0 if it's not.
+ * If the coordinates are out of bounds, it returns 1, treating out of bound
+ * areas as walls.
+ * 
+ * @return: 1 if the position is a wall, 0 if it is not.
+*/
 int isWall(double x, double y) {
     int mapX = (int)floor(x);
     int mapY = (int)floor(y);
@@ -25,8 +38,19 @@ int isWall(double x, double y) {
     return 1;
 }
 
+/**
+ * cast_ray - Casts a ray from the player's position to determine wall distances
+ *            and renders the vertical slices of the wall.
+ * @renderer: The SDL_Renderer used for drawing.
+ * @player: The player object containing the player's position and direction.
+ * @x: The x-coordinate of the vertical slice on the screen.
+ * 
+ * This function calculates the direction of the ray, steps through the grid
+ * map to find the distance to the nearest wall, and then renders a vertical
+ * slice of the wall on the screen.
+*/
 void cast_ray(SDL_Renderer *renderer, Player *player, int x) {
-    double cameraX = 2 * x / (double)SCREEN_WIDTH - 1;
+    double cameraX = 2 * x / (double)SCREEN_WIDTH / 2;
     double rayDirX = cos(player->angle) + cameraX * sin(player->angle);
     double rayDirY = sin(player->angle) - cameraX * cos(player->angle);
 
@@ -84,6 +108,8 @@ void cast_ray(SDL_Renderer *renderer, Player *player, int x) {
     int drawEnd = lineHeight / 2 + SCREEN_HEIGHT / 2;
     if (drawEnd >= SCREEN_HEIGHT) drawEnd = SCREEN_HEIGHT - 1;
 
-    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+    int wallBrightness = (int)(255 / (1 + perpWallDist * perpWallDist * 0.1));
+
+    SDL_SetRenderDrawColor(renderer, wallBrightness, wallBrightness, wallBrightness, 255);
     SDL_RenderDrawLine(renderer, x, drawStart, x, drawEnd);
 }

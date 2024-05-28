@@ -4,7 +4,11 @@
 #include "renderer.h"
 #include "main.h"
 
-
+/**
+ * Main Entry point
+ * 
+ * @return 0.
+*/
 int main(void) {
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
         fprintf(stderr, "Could not initialize SDL: %s\n", SDL_GetError());
@@ -41,10 +45,10 @@ int main(void) {
         }
 
         const Uint8 *state = SDL_GetKeyboardState(NULL);
-        if (state[SDL_SCANCODE_W]) move_player(&player, 0.5);
-        if (state[SDL_SCANCODE_S]) move_player(&player, -0.5);
-        if (state[SDL_SCANCODE_A]) player.angle += 0.1;
-        if (state[SDL_SCANCODE_D]) player.angle -= 0.1;
+        if (state[SDL_SCANCODE_W]) move_player(&player, 0.01);
+        if (state[SDL_SCANCODE_S]) move_player(&player, -0.01);
+        if (state[SDL_SCANCODE_A]) player.angle += 0.01;
+        if (state[SDL_SCANCODE_D]) player.angle -= 0.01;
 
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
         SDL_RenderClear(renderer);
