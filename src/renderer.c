@@ -7,6 +7,12 @@
 #define MINIMAP_PLAYER_RADIUS 3
 #define FOV_ANGLE (M_PI / 4)
 
+void adjust_brightness(Uint8* r, Uint8* g, Uint8* b, float factor) {
+    *r = (Uint8)(*r * factor);
+    *g = (Uint8)(*g * factor);
+    *b = (Uint8)(*b * factor);
+}
+
 /**
  * render_scene - Renders the scene by casting the rays for each vertical slice
  * @renderer: The SDL_renderer used for drawing.
@@ -16,6 +22,17 @@
  * the cast_ray function to render the scene from the players perspective.
 */
 void render_scene(SDL_Renderer *renderer, Player *player) {
+    Uint8 sky_r = 135, sky_g = 206, sky_b = 235;
+    Uint8 ground_r = 189, ground_g = 164, ground_b = 157;
+
+    SDL_SetRenderDrawColor(renderer, sky_r, sky_g, sky_b, 255);
+    SDL_Rect skyRect = { 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT / 2};
+    SDL_RenderFillRect(renderer, &skyRect);
+    
+    SDL_SetRenderDrawColor(renderer, ground_r, ground_g, ground_b, 255);
+    SDL_Rect groundRect = { 0, SCREEN_HEIGHT / 2, SCREEN_WIDTH, SCREEN_HEIGHT / 2};
+    SDL_RenderFillRect(renderer, &groundRect);
+    
     for (int x = 0; x < SCREEN_HEIGHT; x++) {
         cast_ray(renderer, player, x);
     }

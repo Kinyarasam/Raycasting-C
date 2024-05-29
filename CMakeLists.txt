@@ -29,6 +29,12 @@ set_target_properties(raycasting PROPERTIES
     LIBRARY_OUTPUT_DIRECTORY "${BUILD_DIR}"
 )
 
+# Copy assets directory to the output directory
+add_custom_command(TARGET raycasting POST_BUILD
+    COMMAND $(CMAKE_COMMAND) -E copy_directory
+    $(CMAKE_SOURCE_DIR)/assets $<TARGET_FILE_DIR:raycasting>/assets
+)
+
 # Clean target
 add_custom_target(clean-all
     COMMAND ${CMAKE_COMMAND} -P ${CMAKE_SOURCE_DIR}/cmake/clean-all.cmake

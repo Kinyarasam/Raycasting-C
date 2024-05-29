@@ -69,10 +69,38 @@ include CMakeFiles/raycasting.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/raycasting.dir/flags.make
 
+CMakeFiles/raycasting.dir/src/astar.c.o: CMakeFiles/raycasting.dir/flags.make
+CMakeFiles/raycasting.dir/src/astar.c.o: /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/astar.c
+CMakeFiles/raycasting.dir/src/astar.c.o: CMakeFiles/raycasting.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/raycasting.dir/src/astar.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/raycasting.dir/src/astar.c.o -MF CMakeFiles/raycasting.dir/src/astar.c.o.d -o CMakeFiles/raycasting.dir/src/astar.c.o -c /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/astar.c
+
+CMakeFiles/raycasting.dir/src/astar.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/raycasting.dir/src/astar.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/astar.c > CMakeFiles/raycasting.dir/src/astar.c.i
+
+CMakeFiles/raycasting.dir/src/astar.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/raycasting.dir/src/astar.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/astar.c -o CMakeFiles/raycasting.dir/src/astar.c.s
+
+CMakeFiles/raycasting.dir/src/enemy.c.o: CMakeFiles/raycasting.dir/flags.make
+CMakeFiles/raycasting.dir/src/enemy.c.o: /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/enemy.c
+CMakeFiles/raycasting.dir/src/enemy.c.o: CMakeFiles/raycasting.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/raycasting.dir/src/enemy.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/raycasting.dir/src/enemy.c.o -MF CMakeFiles/raycasting.dir/src/enemy.c.o.d -o CMakeFiles/raycasting.dir/src/enemy.c.o -c /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/enemy.c
+
+CMakeFiles/raycasting.dir/src/enemy.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/raycasting.dir/src/enemy.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/enemy.c > CMakeFiles/raycasting.dir/src/enemy.c.i
+
+CMakeFiles/raycasting.dir/src/enemy.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/raycasting.dir/src/enemy.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/enemy.c -o CMakeFiles/raycasting.dir/src/enemy.c.s
+
 CMakeFiles/raycasting.dir/src/main.c.o: CMakeFiles/raycasting.dir/flags.make
 CMakeFiles/raycasting.dir/src/main.c.o: /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/main.c
 CMakeFiles/raycasting.dir/src/main.c.o: CMakeFiles/raycasting.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/raycasting.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/raycasting.dir/src/main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/raycasting.dir/src/main.c.o -MF CMakeFiles/raycasting.dir/src/main.c.o.d -o CMakeFiles/raycasting.dir/src/main.c.o -c /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/main.c
 
 CMakeFiles/raycasting.dir/src/main.c.i: cmake_force
@@ -86,7 +114,7 @@ CMakeFiles/raycasting.dir/src/main.c.s: cmake_force
 CMakeFiles/raycasting.dir/src/maze.c.o: CMakeFiles/raycasting.dir/flags.make
 CMakeFiles/raycasting.dir/src/maze.c.o: /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/maze.c
 CMakeFiles/raycasting.dir/src/maze.c.o: CMakeFiles/raycasting.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/raycasting.dir/src/maze.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/raycasting.dir/src/maze.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/raycasting.dir/src/maze.c.o -MF CMakeFiles/raycasting.dir/src/maze.c.o.d -o CMakeFiles/raycasting.dir/src/maze.c.o -c /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/maze.c
 
 CMakeFiles/raycasting.dir/src/maze.c.i: cmake_force
@@ -100,7 +128,7 @@ CMakeFiles/raycasting.dir/src/maze.c.s: cmake_force
 CMakeFiles/raycasting.dir/src/player.c.o: CMakeFiles/raycasting.dir/flags.make
 CMakeFiles/raycasting.dir/src/player.c.o: /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/player.c
 CMakeFiles/raycasting.dir/src/player.c.o: CMakeFiles/raycasting.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/raycasting.dir/src/player.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/raycasting.dir/src/player.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/raycasting.dir/src/player.c.o -MF CMakeFiles/raycasting.dir/src/player.c.o.d -o CMakeFiles/raycasting.dir/src/player.c.o -c /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/player.c
 
 CMakeFiles/raycasting.dir/src/player.c.i: cmake_force
@@ -114,7 +142,7 @@ CMakeFiles/raycasting.dir/src/player.c.s: cmake_force
 CMakeFiles/raycasting.dir/src/raycasting.c.o: CMakeFiles/raycasting.dir/flags.make
 CMakeFiles/raycasting.dir/src/raycasting.c.o: /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/raycasting.c
 CMakeFiles/raycasting.dir/src/raycasting.c.o: CMakeFiles/raycasting.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/raycasting.dir/src/raycasting.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/raycasting.dir/src/raycasting.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/raycasting.dir/src/raycasting.c.o -MF CMakeFiles/raycasting.dir/src/raycasting.c.o.d -o CMakeFiles/raycasting.dir/src/raycasting.c.o -c /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/raycasting.c
 
 CMakeFiles/raycasting.dir/src/raycasting.c.i: cmake_force
@@ -128,7 +156,7 @@ CMakeFiles/raycasting.dir/src/raycasting.c.s: cmake_force
 CMakeFiles/raycasting.dir/src/renderer.c.o: CMakeFiles/raycasting.dir/flags.make
 CMakeFiles/raycasting.dir/src/renderer.c.o: /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/renderer.c
 CMakeFiles/raycasting.dir/src/renderer.c.o: CMakeFiles/raycasting.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/raycasting.dir/src/renderer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/raycasting.dir/src/renderer.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/raycasting.dir/src/renderer.c.o -MF CMakeFiles/raycasting.dir/src/renderer.c.o.d -o CMakeFiles/raycasting.dir/src/renderer.c.o -c /Users/vivo/Code/Challenges/challenges/Raycasting-C/src/renderer.c
 
 CMakeFiles/raycasting.dir/src/renderer.c.i: cmake_force
@@ -141,6 +169,8 @@ CMakeFiles/raycasting.dir/src/renderer.c.s: cmake_force
 
 # Object files for target raycasting
 raycasting_OBJECTS = \
+"CMakeFiles/raycasting.dir/src/astar.c.o" \
+"CMakeFiles/raycasting.dir/src/enemy.c.o" \
 "CMakeFiles/raycasting.dir/src/main.c.o" \
 "CMakeFiles/raycasting.dir/src/maze.c.o" \
 "CMakeFiles/raycasting.dir/src/player.c.o" \
@@ -150,6 +180,8 @@ raycasting_OBJECTS = \
 # External object files for target raycasting
 raycasting_EXTERNAL_OBJECTS =
 
+bin/raycasting: CMakeFiles/raycasting.dir/src/astar.c.o
+bin/raycasting: CMakeFiles/raycasting.dir/src/enemy.c.o
 bin/raycasting: CMakeFiles/raycasting.dir/src/main.c.o
 bin/raycasting: CMakeFiles/raycasting.dir/src/maze.c.o
 bin/raycasting: CMakeFiles/raycasting.dir/src/player.c.o
@@ -158,8 +190,9 @@ bin/raycasting: CMakeFiles/raycasting.dir/src/renderer.c.o
 bin/raycasting: CMakeFiles/raycasting.dir/build.make
 bin/raycasting: /opt/homebrew/Cellar/sdl2/2.30.3/lib/libSDL2.dylib
 bin/raycasting: CMakeFiles/raycasting.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable bin/raycasting"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable bin/raycasting"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/raycasting.dir/link.txt --verbose=$(VERBOSE)
+	$(CMAKE_COMMAND) -E copy_directory $(CMAKE_SOURCE_DIR)/assets /Users/vivo/Code/Challenges/challenges/Raycasting-C/build/bin/assets
 
 # Rule to build all files generated by this target.
 CMakeFiles/raycasting.dir/build: bin/raycasting

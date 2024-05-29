@@ -142,6 +142,54 @@ clean-all/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean-all.dir/build.make CMakeFiles/clean-all.dir/build
 .PHONY : clean-all/fast
 
+src/astar.o: src/astar.c.o
+.PHONY : src/astar.o
+
+# target to build an object file
+src/astar.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycasting.dir/build.make CMakeFiles/raycasting.dir/src/astar.c.o
+.PHONY : src/astar.c.o
+
+src/astar.i: src/astar.c.i
+.PHONY : src/astar.i
+
+# target to preprocess a source file
+src/astar.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycasting.dir/build.make CMakeFiles/raycasting.dir/src/astar.c.i
+.PHONY : src/astar.c.i
+
+src/astar.s: src/astar.c.s
+.PHONY : src/astar.s
+
+# target to generate assembly for a file
+src/astar.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycasting.dir/build.make CMakeFiles/raycasting.dir/src/astar.c.s
+.PHONY : src/astar.c.s
+
+src/enemy.o: src/enemy.c.o
+.PHONY : src/enemy.o
+
+# target to build an object file
+src/enemy.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycasting.dir/build.make CMakeFiles/raycasting.dir/src/enemy.c.o
+.PHONY : src/enemy.c.o
+
+src/enemy.i: src/enemy.c.i
+.PHONY : src/enemy.i
+
+# target to preprocess a source file
+src/enemy.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycasting.dir/build.make CMakeFiles/raycasting.dir/src/enemy.c.i
+.PHONY : src/enemy.c.i
+
+src/enemy.s: src/enemy.c.s
+.PHONY : src/enemy.s
+
+# target to generate assembly for a file
+src/enemy.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycasting.dir/build.make CMakeFiles/raycasting.dir/src/enemy.c.s
+.PHONY : src/enemy.c.s
+
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
@@ -272,6 +320,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... clean-all"
 	@echo "... raycasting"
+	@echo "... src/astar.o"
+	@echo "... src/astar.i"
+	@echo "... src/astar.s"
+	@echo "... src/enemy.o"
+	@echo "... src/enemy.i"
+	@echo "... src/enemy.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

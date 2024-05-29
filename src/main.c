@@ -4,6 +4,7 @@
 #include "renderer.h"
 #include "main.h"
 #include "maze.h"
+#include "enemy.h"
 
 int maze[HEIGHT][WIDTH];
 
@@ -34,12 +35,37 @@ int main(void) {
         return 1;
     }
 
+    SDL_Surface *enemy_surface = SDL_LoadBMP("./assets/enemy.bmp");
+    if (!enemy_surface) {
+        fprintf(stderr, "Could not load enemy texture: %s\n", SDL_GetError());
+        SDL_DestroyRenderer(renderer);
+        SDL_DestroyWindow(window);
+        SDL_Quit();
+        return 1;
+    }
+    /**
+     * SDL_Texture *enemy_texture = SDL_CreateTextureFromSurface(renderer, enemy_surface);
+     * SDL_FreeSurface(enemy_surface);
+     */
+
     generate_maze(maze);
 
     int running = 1;
     Player player = { .x = 1.5, .y = 1.5, .angle = 0.0 };
 
+    Enemy enemies[3] = {
+        { .x = 3.0, .y = 3.0, .angle = 0.0 },
+        { .x = 5.0, .y = 5.0, .angle = M_PI / 2 },
+        { .x = 7.0, .y = 7.0, .angle = M_PI },
+    };
+
+    Uint32 last_time = SDL_GetTicks();
+
     while (running) {
+        Uint32 current_time = SDL_GetTicks();
+        double delta_time = (current_time - last_time) / 1000.0;
+        last_time = current_time;
+
         SDL_Event event;
         while (SDL_PollEvent(&event)) {
             switch (event.type) {
@@ -55,11 +81,14 @@ int main(void) {
         if (state[SDL_SCANCODE_A]) player.angle += 0.01;
         if (state[SDL_SCANCODE_D]) player.angle -= 0.01;
 
+        update_enemies(enemies, 3, player.x, player.y, maze, delta_time);
+
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
         SDL_RenderClear(renderer);
 
         render_scene(renderer, &player);
         render_minimap(renderer, &player, maze);
+        /** render_enemies(renderer, enemies, 3, enemy_texture, (int)player.x, (int)player.y, player.angle); */
 
         SDL_RenderPresent(renderer);
         SDL_Delay(16);

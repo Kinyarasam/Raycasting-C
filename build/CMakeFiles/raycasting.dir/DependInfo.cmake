@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/vivo/Code/Challenges/challenges/Raycasting-C/src/astar.c" "CMakeFiles/raycasting.dir/src/astar.c.o" "gcc" "CMakeFiles/raycasting.dir/src/astar.c.o.d"
+  "/Users/vivo/Code/Challenges/challenges/Raycasting-C/src/enemy.c" "CMakeFiles/raycasting.dir/src/enemy.c.o" "gcc" "CMakeFiles/raycasting.dir/src/enemy.c.o.d"
   "/Users/vivo/Code/Challenges/challenges/Raycasting-C/src/main.c" "CMakeFiles/raycasting.dir/src/main.c.o" "gcc" "CMakeFiles/raycasting.dir/src/main.c.o.d"
   "/Users/vivo/Code/Challenges/challenges/Raycasting-C/src/maze.c" "CMakeFiles/raycasting.dir/src/maze.c.o" "gcc" "CMakeFiles/raycasting.dir/src/maze.c.o.d"
   "/Users/vivo/Code/Challenges/challenges/Raycasting-C/src/player.c" "CMakeFiles/raycasting.dir/src/player.c.o" "gcc" "CMakeFiles/raycasting.dir/src/player.c.o.d"
