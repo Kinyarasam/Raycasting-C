@@ -3,6 +3,9 @@
 #include "player.h"
 #include "renderer.h"
 #include "main.h"
+#include "maze.h"
+
+int maze[HEIGHT][WIDTH];
 
 /**
  * Main Entry point
@@ -31,6 +34,8 @@ int main(void) {
         return 1;
     }
 
+    generate_maze(maze);
+
     int running = 1;
     Player player = { .x = 1.5, .y = 1.5, .angle = 0.0 };
 
@@ -45,8 +50,8 @@ int main(void) {
         }
 
         const Uint8 *state = SDL_GetKeyboardState(NULL);
-        if (state[SDL_SCANCODE_W]) move_player(&player, 0.01);
-        if (state[SDL_SCANCODE_S]) move_player(&player, -0.01);
+        if (state[SDL_SCANCODE_W]) move_player(&player, 0.05);
+        if (state[SDL_SCANCODE_S]) move_player(&player, -0.05);
         if (state[SDL_SCANCODE_A]) player.angle += 0.01;
         if (state[SDL_SCANCODE_D]) player.angle -= 0.01;
 

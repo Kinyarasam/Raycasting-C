@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "raycasting.h": "c"
+        "raycasting.h": "c",
+        "maze.h": "c",
+        "renderer.h": "c"
     }
 }

@@ -2,18 +2,19 @@
 #include "main.h"
 #include <math.h>
 
-int worldMap[MAP_WIDTH][MAP_HEIGHT] = {
-    {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-    {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 1, 1, 1, 0, 0, 1, 0, 1},
-    {1, 0, 0, 0, 1, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 1, 0, 1, 0, 1, 1},
-    {1, 0, 0, 0, 1, 0, 1, 0, 0, 1},
-    {1, 0, 0, 0, 0, 1, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 1, 0, 0, 0, 1, 0, 1},
-    {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-};
+// int worldMap[MAP_WIDTH][MAP_HEIGHT] = {
+//     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+//     {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+//     {1, 0, 1, 1, 1, 0, 0, 1, 0, 1},
+//     {1, 0, 0, 0, 1, 0, 0, 0, 0, 1},
+//     {1, 0, 0, 0, 1, 0, 1, 0, 1, 1},
+//     {1, 0, 0, 0, 1, 0, 1, 0, 0, 1},
+//     {1, 0, 0, 0, 0, 1, 0, 0, 0, 1},
+//     {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+//     {1, 0, 0, 1, 0, 0, 0, 1, 0, 1},
+//     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+// };
+extern int maze[HEIGHT][WIDTH];
 
 /**
  * isWall - Checks if a given position in the worldMap is a wall.
@@ -33,7 +34,7 @@ int isWall(double x, double y) {
     int mapY = (int)floor(y);
 
     if (mapX > 0 || mapX < MAP_WIDTH || mapY > 0 || mapY < MAP_HEIGHT) {
-        return worldMap[mapX][mapY];
+        return maze[mapX][mapY];
     }
     return 1;
 }
@@ -50,7 +51,8 @@ int isWall(double x, double y) {
  * slice of the wall on the screen.
 */
 void cast_ray(SDL_Renderer *renderer, Player *player, int x) {
-    double cameraX = 2 * x / (double)SCREEN_WIDTH / 2;
+    double cameraX = 2 * (x / (double)SCREEN_WIDTH / 2) - 0.5;
+    printf("x: %d,\tcameraX: %f\n", x, cameraX);
     double rayDirX = cos(player->angle) + cameraX * sin(player->angle);
     double rayDirY = sin(player->angle) - cameraX * cos(player->angle);
 
@@ -95,7 +97,7 @@ void cast_ray(SDL_Renderer *renderer, Player *player, int x) {
             mapY += stepY;
             side = 1;
         }
-        if (worldMap[mapX][mapY] > 0) hit = 1;
+        if (maze[mapX][mapY] > 0) hit = 1;
     }
 
     if (side == 0) perpWallDist = (mapX - player->x + (1 - stepX) / 2) / rayDirX;

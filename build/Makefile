@@ -166,6 +166,30 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycasting.dir/build.make CMakeFiles/raycasting.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/maze.o: src/maze.c.o
+.PHONY : src/maze.o
+
+# target to build an object file
+src/maze.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycasting.dir/build.make CMakeFiles/raycasting.dir/src/maze.c.o
+.PHONY : src/maze.c.o
+
+src/maze.i: src/maze.c.i
+.PHONY : src/maze.i
+
+# target to preprocess a source file
+src/maze.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycasting.dir/build.make CMakeFiles/raycasting.dir/src/maze.c.i
+.PHONY : src/maze.c.i
+
+src/maze.s: src/maze.c.s
+.PHONY : src/maze.s
+
+# target to generate assembly for a file
+src/maze.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycasting.dir/build.make CMakeFiles/raycasting.dir/src/maze.c.s
+.PHONY : src/maze.c.s
+
 src/player.o: src/player.c.o
 .PHONY : src/player.o
 
@@ -251,6 +275,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/maze.o"
+	@echo "... src/maze.i"
+	@echo "... src/maze.s"
 	@echo "... src/player.o"
 	@echo "... src/player.i"
 	@echo "... src/player.s"

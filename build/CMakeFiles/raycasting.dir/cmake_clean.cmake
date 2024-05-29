@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/raycasting.dir/src/main.c.o"
   "CMakeFiles/raycasting.dir/src/main.c.o.d"
+  "CMakeFiles/raycasting.dir/src/maze.c.o"
+  "CMakeFiles/raycasting.dir/src/maze.c.o.d"
   "CMakeFiles/raycasting.dir/src/player.c.o"
   "CMakeFiles/raycasting.dir/src/player.c.o.d"
   "CMakeFiles/raycasting.dir/src/raycasting.c.o"
