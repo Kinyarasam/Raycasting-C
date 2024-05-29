@@ -59,6 +59,7 @@ int main(void) {
         SDL_RenderClear(renderer);
 
         render_scene(renderer, &player);
+        render_minimap(renderer, &player, maze);
 
         SDL_RenderPresent(renderer);
         SDL_Delay(16);

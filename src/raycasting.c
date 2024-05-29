@@ -52,7 +52,6 @@ int isWall(double x, double y) {
 */
 void cast_ray(SDL_Renderer *renderer, Player *player, int x) {
     double cameraX = 2 * (x / (double)SCREEN_WIDTH / 2) - 0.5;
-    printf("x: %d,\tcameraX: %f\n", x, cameraX);
     double rayDirX = cos(player->angle) + cameraX * sin(player->angle);
     double rayDirY = sin(player->angle) - cameraX * cos(player->angle);
 
