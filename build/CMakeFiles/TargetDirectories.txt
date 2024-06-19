@@ -1,4 +1,0 @@
-/home/don/low/c/ray/build/CMakeFiles/raycasting.dir
-/home/don/low/c/ray/build/CMakeFiles/clean-all.dir
-/home/don/low/c/ray/build/CMakeFiles/edit_cache.dir
-/home/don/low/c/ray/build/CMakeFiles/rebuild_cache.dir
