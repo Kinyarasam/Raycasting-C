@@ -14,5 +14,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Install dependencies
-      run: make all
+    - name: clean build
+      run: make clean
