@@ -1,10 +1,10 @@
 #include <SDL2/SDL.h>
 #include <stdio.h>
-#include "player.h"
-#include "renderer.h"
-#include "main.h"
-#include "maze.h"
-#include "enemy.h"
+#include "../include/player.h"
+#include "../include/renderer.h"
+#include "../include/main.h"
+#include "../include/maze.h"
+#include "../include/enemy.h"
 
 int maze[HEIGHT][WIDTH];
 
@@ -55,8 +55,10 @@ int main(void) {
 
     Enemy enemies[3] = {
         { .x = 3.0, .y = 3.0, .angle = 0.0 },
-        { .x = 5.0, .y = 5.0, .angle = M_PI / 2 },
-        { .x = 7.0, .y = 7.0, .angle = M_PI },
+
+        // include M_PI ? math.h
+        { .x = 5.0, .y = 5.0, .angle = MATH_M_PI / 2 },
+        { .x = 7.0, .y = 7.0, .angle = MATH_M_PI },
     };
 
     Uint32 last_time = SDL_GetTicks();

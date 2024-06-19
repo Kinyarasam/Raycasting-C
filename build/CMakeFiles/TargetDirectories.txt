@@ -1,4 +1,4 @@
-/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles/raycasting.dir
-/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles/clean-all.dir
-/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles/edit_cache.dir
-/Users/vivo/Code/Challenges/challenges/Raycasting-C/build/CMakeFiles/rebuild_cache.dir
+/home/don/low/c/ray/build/CMakeFiles/raycasting.dir
+/home/don/low/c/ray/build/CMakeFiles/clean-all.dir
+/home/don/low/c/ray/build/CMakeFiles/edit_cache.dir
+/home/don/low/c/ray/build/CMakeFiles/rebuild_cache.dir

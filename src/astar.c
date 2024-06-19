@@ -1,5 +1,5 @@
-#include "astar.h"
-#include "maze.h"
+#include "../include/astar.h"
+#include "../include/maze.h"
 #include <stdlib.h>
 #include <math.h>
 

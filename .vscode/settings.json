@@ -1,7 +1,17 @@
 {
-    "files.associations": {
-        "raycasting.h": "c",
-        "maze.h": "c",
-        "renderer.h": "c"
-    }
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**", // Include all files in the workspace folder
+                "${workspaceFolder}/include" // Add your include directory
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
 }

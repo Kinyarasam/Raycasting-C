@@ -1,11 +1,12 @@
-#include "renderer.h"
-#include "raycasting.h"
-#include "main.h"
+#include "../include/renderer.h"
+#include "../include/raycasting.h"
+#include "../include/main.h"
 #include <math.h>
+#include "../include/maze.h"
 
 #define MINIMAP_SCALE 5
 #define MINIMAP_PLAYER_RADIUS 3
-#define FOV_ANGLE (M_PI / 4)
+#define FOV_ANGLE (MATH_M_PI / 4)
 
 void adjust_brightness(Uint8* r, Uint8* g, Uint8* b, float factor) {
     *r = (Uint8)(*r * factor);
