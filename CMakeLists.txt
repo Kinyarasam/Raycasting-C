@@ -22,6 +22,9 @@ add_executable(raycasting ${SRC_FILES})
 # Link SDL2 libraries
 target_link_libraries(raycasting ${SDL2_LIBRARIES})
 
+# Link math library (libm)
+target_link_libraries(raycasting m)
+
 # Output directory
 set_target_properties(raycasting PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${BIN_DIR}"
@@ -31,8 +34,8 @@ set_target_properties(raycasting PROPERTIES
 
 # Copy assets directory to the output directory
 add_custom_command(TARGET raycasting POST_BUILD
-    COMMAND $(CMAKE_COMMAND) -E copy_directory
-    $(CMAKE_SOURCE_DIR)/assets $<TARGET_FILE_DIR:raycasting>/assets
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/assets $<TARGET_FILE_DIR:raycasting>/assets
 )
 
 # Clean target

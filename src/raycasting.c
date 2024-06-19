@@ -1,5 +1,5 @@
-#include "raycasting.h"
-#include "main.h"
+#include "../include/raycasting.h"
+#include "../include/main.h"
 #include <math.h>
 
 // int worldMap[MAP_WIDTH][MAP_HEIGHT] = {

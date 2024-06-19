@@ -1,8 +1,8 @@
-#include "enemy.h"
-#include "main.h"
+#include "../include/enemy.h"
+#include "../include/main.h"
 #include <math.h>
-#include "maze.h"
-#include "astar.h"
+#include "../include/maze.h"
+#include "../include/astar.h"
 
 #define ENEMY_SPEED 0.05
 
@@ -38,7 +38,7 @@ void update_enemies(Enemy *enemies, int num_enemies, float playerX, float player
                 Point next_pos = path[path_length - 2];
                 float dirX = next_pos.x - enemies[i].x;
                 float dirY = next_pos.y - enemies[i].y;
-                float distance = sqrtf(dirX * dirY + dirY * dirY); /** @bug: possible bug */
+                float distance = sqrtf(dirX * dirX + dirY * dirY); // Calculate distance properly
 
                 dirX /= distance;
                 dirY /= distance;
@@ -46,10 +46,9 @@ void update_enemies(Enemy *enemies, int num_enemies, float playerX, float player
                 float newX = enemies[i].x + dirX * ENEMY_SPEED * delta_time;
                 float newY = enemies[i].y + dirY * ENEMY_SPEED * delta_time;
 
-                if (maze[(int)enemies[i].x] == 0) {
+                // Correctly access maze with 2D indices
+                if (maze[(int)enemies[i].x][(int)enemies[i].y] == 0) {
                     enemies[i].x = newX;
-                }
-                if (maze[(int)enemies[i].y] == 0) {
                     enemies[i].y = newY;
                 }
 
@@ -57,6 +56,5 @@ void update_enemies(Enemy *enemies, int num_enemies, float playerX, float player
             }
         }
     }
-
-    free_grid(&grid);
 }
+

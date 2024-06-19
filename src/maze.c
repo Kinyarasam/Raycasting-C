@@ -1,4 +1,4 @@
-#include "maze.h"
+#include "/home/don/low/c/ray/include/maze.h"
 #include <stdlib.h>
 #include <time.h>
 

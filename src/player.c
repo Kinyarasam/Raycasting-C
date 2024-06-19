@@ -1,5 +1,5 @@
-#include "player.h"
-#include "raycasting.h"
+#include "../include/player.h"
+#include "../include/raycasting.h"
 
 /**
  * move_player - Moves the player by a certain distance in the direction
