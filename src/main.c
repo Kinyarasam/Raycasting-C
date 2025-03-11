@@ -35,7 +35,7 @@ int main(void) {
         return 1;
     }
 
-    SDL_Surface *enemy_surface = SDL_LoadBMP("./assets/enemy.bmp");
+    SDL_Surface *enemy_surface = SDL_LoadBMP("assets/enemy.bmp");
     if (!enemy_surface) {
         fprintf(stderr, "Could not load enemy texture: %s\n", SDL_GetError());
         SDL_DestroyRenderer(renderer);

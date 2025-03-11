@@ -46,10 +46,16 @@ void update_enemies(Enemy *enemies, int num_enemies, float playerX, float player
                 float newX = enemies[i].x + dirX * ENEMY_SPEED * delta_time;
                 float newY = enemies[i].y + dirY * ENEMY_SPEED * delta_time;
 
-                if (maze[(int)enemies[i].x] == 0) {
+                // if (maze[(int)enemies[i].x] == 0.0) {
+                //     enemies[i].x = newX;
+                // }
+                // if (maze[(int)(enemies[i].y)] == 0).0 {
+                //     enemies[i].y = newY;
+                // }
+
+                 // Check if the new position is within the maze and not a wall
+                 if (newX >= 0 && newX < WIDTH && newY >= 0 && newY < HEIGHT && maze[(int)newY][(int)newX] == 0) {
                     enemies[i].x = newX;
-                }
-                if (maze[(int)enemies[i].y] == 0) {
                     enemies[i].y = newY;
                 }
 

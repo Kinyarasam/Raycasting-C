@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 project(raycasting C)
 
 # Compiler flags
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror -Wextra -pedantic -std=c11")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -lm -Wall -Werror -Wextra -pedantic -std=c11")
 
 # Directories
 set(SRC_DIR src)
@@ -20,7 +20,7 @@ file(GLOB SRC_FILES ${SRC_DIR}/*.c)
 add_executable(raycasting ${SRC_FILES})
 
 # Link SDL2 libraries
-target_link_libraries(raycasting ${SDL2_LIBRARIES})
+target_link_libraries(raycasting ${SDL2_LIBRARIES} m)
 
 # Output directory
 set_target_properties(raycasting PROPERTIES

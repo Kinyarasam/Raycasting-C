@@ -2,6 +2,7 @@
     "files.associations": {
         "raycasting.h": "c",
         "maze.h": "c",
-        "renderer.h": "c"
+        "renderer.h": "c",
+        "main.h": "c"
     }
 }
