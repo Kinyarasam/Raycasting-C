@@ -1,5 +1,5 @@
 #include "raycasting.h"
-#include "main.h"
+#include "gamestate.h"
 #include <math.h>
 
 // int worldMap[MAP_WIDTH][MAP_HEIGHT] = {
@@ -14,7 +14,6 @@
 //     {1, 0, 0, 1, 0, 0, 0, 1, 0, 1},
 //     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 // };
-extern int maze[HEIGHT][WIDTH];
 
 /**
  * isWall - Checks if a given position in the worldMap is a wall.
@@ -29,12 +28,12 @@ extern int maze[HEIGHT][WIDTH];
  * 
  * @return: 1 if the position is a wall, 0 if it is not.
 */
-int isWall(double x, double y) {
+int isWall(GameState *gamestate, double x, double y) {
     int mapX = (int)floor(x);
     int mapY = (int)floor(y);
 
     if (mapX > 0 || mapX < MAP_WIDTH || mapY > 0 || mapY < MAP_HEIGHT) {
-        return maze[mapX][mapY];
+        return gamestate->maze[mapX][mapY];
     }
     return 1;
 }
@@ -50,7 +49,9 @@ int isWall(double x, double y) {
  * map to find the distance to the nearest wall, and then renders a vertical
  * slice of the wall on the screen.
 */
-void cast_ray(SDL_Renderer *renderer, Player *player, int x) {
+void cast_ray(GameState *gamestate, int x) {
+    Player *player = &gamestate->player;
+
     double cameraX = 2 * (x / (double)SCREEN_WIDTH / 2) - 0.5;
     double rayDirX = cos(player->angle) + cameraX * sin(player->angle);
     double rayDirY = sin(player->angle) - cameraX * cos(player->angle);
@@ -96,7 +97,7 @@ void cast_ray(SDL_Renderer *renderer, Player *player, int x) {
             mapY += stepY;
             side = 1;
         }
-        if (maze[mapX][mapY] > 0) hit = 1;
+        if (gamestate->maze[mapX][mapY] > 0) hit = 1;
     }
 
     if (side == 0) perpWallDist = (mapX - player->x + (1 - stepX) / 2) / rayDirX;
@@ -111,6 +112,6 @@ void cast_ray(SDL_Renderer *renderer, Player *player, int x) {
 
     int wallBrightness = (int)(255 / (1 + perpWallDist * perpWallDist * 0.1));
 
-    SDL_SetRenderDrawColor(renderer, wallBrightness, wallBrightness, wallBrightness, 255);
-    SDL_RenderDrawLine(renderer, x, drawStart, x, drawEnd);
+    SDL_SetRenderDrawColor(gamestate->renderer, wallBrightness, wallBrightness, wallBrightness, 255);
+    SDL_RenderDrawLine(gamestate->renderer, x, drawStart, x, drawEnd);
 }

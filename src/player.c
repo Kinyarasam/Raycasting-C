@@ -11,13 +11,13 @@
  * current direction and distance to move. It the checks if the new position
  * is a wall. If the new position is not a wall, it updates the player's position.
 */
-void move_player(Player *player, double distance) {
+void move_player(GameState *gamestate, double distance) {
     /** Move player */
-    double newX = player->x + distance * cos(player->angle);
-    double newY = player->y + distance * sin(player->angle);
+    double newX = gamestate->player.x + distance * cos(gamestate->player.angle);
+    double newY = gamestate->player.y + distance * sin(gamestate->player.angle);
 
-    if (isWall(newX, newY) == 1) return;
+    if (isWall(gamestate, newX, newY) == 1) return;
 
-    player->x = newX;
-    player->y = newY;
+    gamestate->player.x = newX;
+    gamestate->player.y = newY;
 }

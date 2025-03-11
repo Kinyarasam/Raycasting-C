@@ -3,6 +3,7 @@
         "raycasting.h": "c",
         "maze.h": "c",
         "renderer.h": "c",
-        "main.h": "c"
+        "main.h": "c",
+        "gamestate.h": "c"
     }
 }

@@ -11,7 +11,7 @@
 extern int worldMap[MAP_WIDTH][MAP_HEIGHT];
 // extern int maze[MAZE_WIDTH][MAZE_HEIGHT];
 
-int isWall(double x, double y);
-void cast_ray(SDL_Renderer *renderer, Player *player, int x);
+int isWall(GameState *gamestate, double x, double y);
+void cast_ray(GameState *gamestate, int x);
 
 #endif /** __RAYCASTING_H__ */

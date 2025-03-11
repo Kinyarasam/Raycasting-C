@@ -5,7 +5,7 @@
 #include "maze.h"
 #include <SDL2/SDL.h>
 
-void render_scene(SDL_Renderer *renderer, Player *player);
-void render_minimap(SDL_Renderer *renderer, Player *player, int maze[HEIGHT][WIDTH]);
+void render_scene(GameState *gamestate);
+void render_minimap(GameState *gamestate);
 
 #endif /** __RENDERER_H__ */
